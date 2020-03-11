@@ -33,6 +33,13 @@ public class MainActivity extends AppCompatActivity {
                 tv.setText(counter + "");
             }
         };
+        View.OnClickListener reset = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                counter=0;
+                tv.setText(counter + "");
+            }
+        };
         View.OnClickListener declistener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,6 +51,9 @@ public class MainActivity extends AppCompatActivity {
         btn_inc.setOnClickListener(listener);
         Button btn_dec = findViewById(R.id.btn2);
         btn_dec.setOnClickListener(declistener);
+        Button btn_reset = findViewById(R.id.btn3);
+        btn_reset.setOnClickListener(reset);
+
         String message = getString(android.R.string.dialog_alert_title);
 
 //        AlertDialog ad = new AlertDialog.Builder(this)
