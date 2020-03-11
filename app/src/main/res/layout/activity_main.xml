@@ -4,39 +4,64 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/image"
     tools:context=".MainActivity">
+
 
     <TextView
         android:id="@+id/textview"
-        android:textSize="32sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World2!"
+        android:background="#ffffff"
+        android:text="@string/app_name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/colorAccent"
+        android:textSize="32sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.529" />
 
     <Button
         android:id="@+id/btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
         android:text="@string/btn_increment"
         android:textSize="28sp"
-        app:layout_constraintEnd_toStartOf="@+id/btn2"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textview" />
+        app:layout_constraintTop_toBottomOf="@+id/textview"
+        app:layout_constraintVertical_bias="0.501" />
 
     <Button
         android:id="@+id/btn2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="44dp"
+        android:layout_marginRight="44dp"
         android:text="@string/btn_decrement"
         android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview"
+        app:layout_constraintVertical_bias="0.501" />
+
+    <Button
+        android:id="@+id/btn3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_reset"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn2"
+        app:layout_constraintHorizontal_bias="0.425"
         app:layout_constraintStart_toEndOf="@+id/btn"
-        app:layout_constraintTop_toTopOf="@+id/btn" />
+        app:layout_constraintTop_toBottomOf="@+id/textview"
+        app:layout_constraintVertical_bias="0.501" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -44,8 +69,10 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@+id/textview"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.646"
         tools:src="@tools:sample/avatars" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
